@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christ Embassy Hove Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="home.html">
+                <img src="images/12234logo.png" alt="CE Hove Logo">
+                <span class="logo-text">Christ Embassy Hove</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li class="dropdowns">
+                        <button class="dropdown-button">ABOUT</button>
+                            <ul class="dropdown-content">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="about-pastor-chris.html">About Pastor Chris</a></li>
+                                <li><a href="our-pastors.html">Our Pastors</a></li>
+                                <li><a href="our-statements-of-faith.html">Our Statements of Faith</a></li>
+                            </ul>
+                    </li>
+                    <li class="dropdowns">
+                        <button class="dropdown-button">MEDIA</button>
+                            <ul class="dropdown-content">
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="songlyrics.html">Songs and Lyrics</a></li>
+                            </ul>
+                    </li>
+                    <li class="dropdowns">
+                        <button class="dropdown-button">GETTING INVOLVED</button>
+                            <ul class="dropdown-content">
+                                <li><a href="songlyrics.html">Cell Ministry</a></li>
+                                <li><a href="songlyrics.html">Foundation School</a></li>
+                                <li><a href="songlyrics.html">Service Departments</a></li>
+                                <li><a href="songlyrics.html">Partnership Arms</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+
+        <h1>Contact Us</h1>
+    </section>
+
+  <!-- ========== Contact Screen ========== -->
+
+  <section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.996429147336!2d-0.1413568231318358!3d50.83123005987363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487585fca08293d5%3A0xb0fc803b2ad6ef6b!2sChrist%20Embassy%20Hove%20Church!5e0!3m2!1sen!2suk!4v1753210804705!5m2!1sen!2suk" width="" height="450" class="contact-map" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <section class="contact-us">
+    <div class="row">
+      <div class="contact-col">
+        <div>
+          <i class="fa-solid fa-home"></i>
+          <span>
+            <h5>Lagoon Room, BMECP Centre,</h5>
+            <p>Fleet Street, Brighton and Hove, BN1 4ZE</p>
+          </span>
+        </div>
+        <div>
+          <i class="fa-solid fa-phone"></i>
+          <span>
+            <h5>+44 7403 914732</h5>
+            <p>Pastor ND Daniels</p>
+          </span>
+        </div>
+        <div>
+          <i class="fa-solid fa-envelope"></i>
+          <span>
+            <h5>cehove2@gmail.com</h5>
+            <p>Email us your query</p>
+          </span>
+        </div>    
+      </div>
+
+      <div class="contact-col">
+          <form id="contact-form">
+            
+            <input type="text" id="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" id="email" placeholder="Your Email" class="contact-inputs" required>
+            <input type="text" id="number" placeholder="Your Phone Number" class="contact-inputs" required>
+            <textarea id="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+        <p id="response-message"></p>
+            <button type="submit" class="contact-button">Send Message</button>
+          </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const responseMessage = document.getElementById('response-message');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        number: document.getElementById('number').value,
+        message: document.getElementById('message').value
+      };
+
+      try {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbyTGwPuDozenKHfP4KZpzLAH424I2qU4z9frZyNB1soXRAhYPhgbJcyooKlCkLa3EMMTg/exec", {
+          method: 'POST',
+          body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+          responseMessage.textContent = 'Thank you! Your message has been sent.';
+          form.reset();
+        } else {
+          responseMessage.textContent = 'Error submitting the form. Please try again.';
+        }
+      } catch (error) {
+        responseMessage.textContent = 'An error occurred. Please try again.';
+      }
+    });
+  </script>
+
+  <!-- ========== Footer Section ========== -->
+  <footer class="footer-">
+    <div class="footer-container">
+
+      <!-- Contact Info -->
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Christ Embassy Hove</p>
+        <p>Lagoon Room, BMECP Centre, Fleet Street, Brighton, BN1 4ZE</p>
+        <p>Email: <a href="mailto:cehove2@gmail.com">cehove2@gmail.com</a></p>
+        <p>Phone: +44 7403 914732</p>
+        <p>Service Times:<br>Sunday – 10:00 AM<br>Wednesday – 6:30 PM</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="https://pcdl.co/welcome" target="_blank">Pastor Chris Digital Library</a></li>
+          <li><a href="https://rhapsodyofrealities.org" target="_blank">Rhapsody of Realities</a></li>
+          <li><a href="https://pastorchrisonline.org" target="_blank">Pastor Chris Online</a></li>
+          <li><a href="https://loveworlduk.org" target="_blank">Loveworld UK</a></li>
+          <li><a href="https://www.kingsch.at/h" target="_blank">Kingschat</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2025 Christ Embassy Hove. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+    <!---- JavaScript for Toggle Menu ---->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }        
+    </script>
+
+</html>
