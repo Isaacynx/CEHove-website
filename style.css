@@ -139,29 +139,35 @@ nav .fa-solid{
   font-size: 62px;
 }
 
+.text-box p{
+  font-size: 25px;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
 .text-box{
-  margin: 10px 0 40px;
-  font-size: 14px;
+  margin: 10px 0px 40px;
   color: #fff;
 }
+
 
 .hero-button{
   display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 12px 34px;
-  font-size: 13px;
-  margin-top: 30px;
+  border: 2px solid #EFBF04;
+  color: #EFBF04;
   background: transparent;
-  position: relative;
-  cursor: pointer;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.22s ease;
 }
 
 .hero-button:hover{
-  border: 1px solid #f44336;
-  background: #f44336;
-  transition: 0.5s;
+  background: #EFBF04;
+  color: #000;
+  box-shadow: 0 10px 30px rgba(239,191,4,0.18);
 }
 
 /*----------------------------------
@@ -198,7 +204,7 @@ p{
   margin-bottom: 5%;
   padding: 20px 12px;
   box-sizing: border-box;
-  transition: 0.5s;
+  transition: all 0.22s ease;
 }
 h3{
   text-align: center;
@@ -214,28 +220,58 @@ h3{
 ========= WORSHIP WITH US ==========
 ----------------------------------*/
 .wwu{
-  margin: 100px auto;
-  width: 80%;
-  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/banner.PNG);
-  background-position: top;
+  width: 100%;
+  max-width: auto;
+  margin: 80px auto;
+  overflow: hidden;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url(images/banner.PNG);
+  background-position: center;
   background-size: cover;
-  border-radius: 10px;
   text-align: center;
-  padding: 100px 0;
+  padding: 200px 0px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
+/* heading scales responsively */
 .wwu h1{
   color: #fff;
-  margin-bottom: 10px;
+  font-size: clamp(28px, 4.5vw, 52px);
+  margin: 0 0 8px;
+  padding: 0;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* service times secondary but readable */
+.wwu h3{
+  color: rgba(255,255,255,0.95);
+  margin: 0 0 22px;
+  font-weight: 400;
+  font-size: clamp(16px, 2.2vw, 32px);
   padding: 0;
 }
 
-.wwu h3{
-  color: #fff;
-  margin-bottom: 40px;
-  font-weight: 400;
-  padding: 0;
+/* CTA / Find Us button styling kept local to this section */
+.wwu .hero-button {
+  display: inline-block;
+  border: 2px solid #EFBF04;
+  color: #EFBF04;
+  background: transparent;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.22s ease;
 }
+.wwu .hero-button:hover {
+  background: #EFBF04;
+  color: #000;
+  box-shadow: 0 10px 30px rgba(239,191,4,0.18);
+}
+
 
 /*----------------------------------
 ============ NEWS CARD =============
@@ -533,6 +569,53 @@ h3{
   color: #665;
 }
 
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  color: #665;
+  text-decoration: none;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #616161;
+  color: #ffffff;
+  text-align: left;
+  padding: 8px;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above text */
+  left: 50%;
+  margin-left: -125px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*----------------------------------
+======= FOUNDATION SCHOOL  ========
+----------------------------------*/
+.sub-header-foundation{
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/foundation\ school.webp);
+  background-position: 0 20%;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+.sub-header-foundation h1{
+  margin-top: 100px;
+}
 
 /*----------------------------------
 ========= CONTACT SCREEN ===========
@@ -607,3 +690,25 @@ h3{
 .contact-button:hover {
   background-color: #EFBF04;
  }
+
+/*----------------------------------
+=========== WATCH LIVE ============
+----------------------------------*/
+ :root { --radius: 18px; --shadow: 0 10px 30px rgba(0,0,0,.18); }
+  .live-wrap { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+  .player-shell { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: #000; }
+  .yt-frame { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display:none; } /* hidden until playing */
+  .cover {
+    position:absolute; inset:0; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; padding:2rem; text-align:center;
+    background: #000 url('poster.jpg') center/cover no-repeat;
+    color:#fff;
+  }
+  .cover::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,.35); }
+  .cover > * { position:relative; z-index:1; }
+  .badge { display:inline-flex; align-items:center; gap:.5rem; padding:.4rem .7rem; border-radius:999px; background:#e11d48; font-weight:600; }
+  .btn {
+    margin-top:1rem; display:inline-block; padding:.8rem 1rem; border-radius:12px;
+    background:#ffffff; color:#111; text-decoration:none; font-weight:600;
+  }
+  .muted-hint { position:absolute; left:12px; bottom:12px; background:rgba(0,0,0,.6); color:#fff; padding:.35rem .55rem; border-radius:8px; font-size:.85rem; display:none; }

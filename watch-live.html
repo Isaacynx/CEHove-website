@@ -54,64 +54,68 @@
         </nav>
 
 
-        <h1>About Us</h1>
+        <h1>Watch Live</h1>
     </section>
 
-  <!-- ===== Our Statements of Faith ===== -->  
-  <section class="statements-of-faith">
-        <div class="faith-statements">
-            <h4>This is the statement of Bible doctrine as believed and taught by the LoveWorld Inc. aka Christ Embassy. This statement of faith has its source in the Bible and is in total agreement with the foundational principles of the doctrines of Christ.</h4></p>
-            <h5>1. We believe that the Bible contains the inspired and infallible Word of God.</h5>
-            <p>(<span class="tooltip"> 2 Timothy 3:16
-              <span class="tooltiptext">"All Scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness."</span>
-              </span>,
-              <span class="tooltip"> 2 Peter 1:20-21
-              <span class="tooltiptext">"Knowing this first, that no prophecy of the scripture is of any private interpretation. For the prophecy came not in old time by the will of man: but holy men of God spake as they were moved by the Holy Ghost."</span>
-              </span>)
-              <br><br>
-            </p>
-            <h5>2. We believe that there is only God eternally existent in three (3) persons; God the Father, God the Son and God the Holy Ghost.</h5>
-            <p>(<span class="tooltip"> Ephesians 4:5-6
-              <span class="tooltiptext">"One Lord, one faith, one baptism, One God and Father of all, who is above all, and through all, and in you all."</span>
-              </span>,
-              <span class="tooltip"> 1 Corinthians 8:6
-              <span class="tooltiptext">"But to us there is but one God, the Father, of whom are all things, and we in him; and one Lord Jesus Christ, by whom are all things, and we by him."</span>
-              </span>,
-              <span class="tooltip"> Genesis 1:26,
-              <span class="tooltiptext">"And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth."</span>
-              </span>,
-              <span class="tooltip"> Matthew 3:16-17,
-              <span class="tooltiptext">"And Jesus, when he was baptized, went up straightway out of the water: and, lo, the heavens were opened unto him, and he saw the Spirit of God descending like a dove, and lighting upon him: And lo a voice from heaven, saying, This is my beloved Son, in whom I am well pleased."</span>
-              </span>)
-              <br><br>
-            </p>
-            <h5>3. We believe in the deity of Christ.</h5>
-            <p>(John 1:1-4; John 10:30; Hebrews 1:1-5)<br></p>
-            <p>---- a. He was born of a virgin (Matthew 1:18-25; Luke 1:30-35)</p>
-            <p>---- b. He was conceived of the Holy Ghost (Matthew 1:18-25; Luke 1:30-35)</p>
-            <p>---- c. He died (John 19:30-35)</p>
-            <p>---- d. He rose again from the dead bodily (John 20:25-29; Luke 24:36-40)</p>
-            <p>---- e. He ascended into heaven bodily (Acts 1:9-11; 1 Thessalonians 4:16)<br><br></p>
-            <h5>4. We believe in the rapture of the church and the Second Coming of Christ.</h5>
-            <p>(1 Thessalonians 4:16-17; Matthew 24:29-30)<br><br></p>
-            <h5>5. We believe that the only means of being cleansed from sin is repentance and faith in the precious blood of Jesus.</h5>
-            <p>(Acts 3:19; Luke 24:47; Ephesians 1:7)<br><br></p>
-            <h5>6. We believe regeneration by the power of the Holy Ghost through the Word of God is essential for personal salvation.</h5>
-            <p>(Titus 3:5; John 3:3-5)<br><br></p>
-            <h5>7. We believe that the redemptive work of Christ on the cross provides divine healing for the body, salvation for the soul of everyone that believes</h5>
-            <p>(1 Peter 2:24; Acts 3:16; Acts 9:32-35)<br></p>
-            <h5>8. We believe that when an individual receives the Holy Ghost, he receives divine enablement for Christian service and witness.</h5>
-            <p>(Acts 1:8; 2:4; 3:1-26; 4:5-12)<br><br></p>
-            <h5>9. We believe in the sanctifying power of the Holy Ghost</h5>
-            <p>(Romans15:16;1Corinthians 6:11-20)<br><br></p>
-            <h5>10. We believe in the final resurrection of both the saved and the lost; the former to eternal life and the latter to eternal judgment.</h5>
-            <p>(Revelations 20:11-15; 1 Corinthians 15:12-23) </p>
+    <div class="live-wrap">
+      <h2 style="text-align:center;margin:0 0 1rem;">Join Our Service</h2>
+
+      <div class="player-shell">
+        <!-- YouTube iframe -->
+        <iframe
+          id="ytplayer"
+          class="yt-frame"
+          title="Live"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+          src="https://www.youtube.com/embed/GHV1VworFfs?autoplay=1&controls=1&modestbranding=1&rel=0&playsinline=1&mute=1">
+        </iframe>
+
+        <!-- Cover screen -->
+        <div id="cover" class="cover">
+          <div class="badge">• OFFLINE</div>
+          <h3 style="margin:.8rem 0 .4rem;">Our live stream will begin shortly</h3>
+        </div>
+
+        <div id="mutedHint" class="muted-hint">Tap 🔊 to unmute</div>
+      </div>
     </div>
 
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    let player;
 
-    </div>
-  </section>
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('ytplayer', {
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange,
+          'onError': onPlayerError
+        }
+      });
+    }
 
+    function onPlayerReady() {
+      // As soon as the player is ready, assume it's online (could be countdown or live)
+      showCover(false);
+    }
+
+    function onPlayerStateChange(e) {
+      if (e.data === YT.PlayerState.ENDED) {
+        showCover(true);
+      }
+    }
+
+    function onPlayerError() {
+      showCover(true);
+    }
+
+    function showCover(show) {
+      document.getElementById('cover').style.display = show ? 'flex' : 'none';
+      document.getElementById('ytplayer').style.display = show ? 'none' : 'block';
+      document.getElementById('mutedHint').style.display = show ? 'none' : 'block';
+    }
+  </script>
 
   <!-- ========== Footer Section ========== -->
   <footer class="footer-">
