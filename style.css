@@ -10,7 +10,7 @@
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/home-screen.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/home-screen.webp);
     background-position: top;
     background-size: cover;
     position: relative;
@@ -251,7 +251,7 @@ h3{
   overflow: hidden;
   background-image:
     linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-    url(images/banner.PNG);
+    url(images/banner.webp);
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -488,7 +488,7 @@ h3{
 .sub-header{
   height: 50vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/edit.png);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/edit.webp);
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -631,7 +631,7 @@ h3{
 .sub-header-about{
   height: 50vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/background.png);
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/background.webp);
   background-position: 0 50%;
   background-size: cover;
   text-align: center;
