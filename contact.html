@@ -90,16 +90,49 @@
       </div>
 
       <div class="contact-col">
-          <form id="contact-form" netlify>
+           <form name="contact" method="POST" data-netlify="true" id="contact-form">
             
-            <input type="text" id="name" placeholder="Your Name" class="contact-inputs" required>
-            <input type="email" id="email" placeholder="Your Email" class="contact-inputs" required>
-            <input type="text" id="number" placeholder="Your Phone Number" class="contact-inputs" required>
-            <textarea id="message" placeholder="Your Message" class="contact-inputs" required></textarea>
-        <p id="response-message"></p>
-            <button type="submit" class="contact-button">Send Message</button>
+            <input type="hidden" name="form-name" value="contact">
+
+            <input 
+              type="text" 
+              name="name"
+              placeholder="Your Name"
+              class="contact-inputs"
+              required
+            >
+
+            <input 
+              type="email" 
+              name="email"
+              placeholder="Your Email"
+              class="contact-inputs"
+              required
+            >
+
+            <input 
+              type="text" 
+              name="number"
+              placeholder="Your Phone Number"
+              class="contact-inputs"
+              required
+            >
+
+            <textarea 
+              name="message"
+              placeholder="Your Message"
+              class="contact-inputs"
+              required
+            ></textarea>
+
+            <p id="response-message"></p>
+
+            <button type="submit" class="contact-button">
+              Send Message
+            </button>
+
           </form>
-      </div>
+        </div>
     </div>
   </section>
 
