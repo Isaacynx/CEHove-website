@@ -632,7 +632,7 @@ h3{
   height: 50vh;
   width: 100%;
   background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/background.webp);
-  background-position: 0 50%;
+  background-position: center;
   background-size: cover;
   text-align: center;
   color: #fff;
@@ -753,3 +753,283 @@ h3{
     background:#ffffff; color:#111; text-decoration:none; font-weight:600;
   }
   .muted-hint { position:absolute; left:12px; bottom:12px; background:rgba(0,0,0,.6); color:#fff; padding:.35rem .55rem; border-radius:8px; font-size:.85rem; display:none; }
+
+/*----------------------------------
+========= HEALING STREAMS ==========
+----------------------------------*/
+.headerhs {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: black;
+  overflow: visible !important;
+}
+
+.herohs {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center; /* Center vertically */
+/* Video fills the hero */
+}
+
+.herohs-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Dark overlay for readability - adjust opacity as needed */
+.herohs-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  z-index: 2;
+}
+
+/* Update hero content - center horizontally, left align text */
+.herohs-content {
+  position: relative;
+  z-index: 3;
+  max-width: 800px; /* Increase max-width */
+  width: 90%; /* Use percentage for responsiveness */
+  margin: 0 auto; /* Center horizontally */
+  padding: 80px 40px; /* Reduced horizontal padding */
+  text-align: left; /* Left align text */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Make text brighter and add shadows */
+.herohs h1 {
+  font-size: 3.5rem; /* Slightly larger */
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.herohs p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  color: #f8f8f8;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  max-width: 600px; /* Limit paragraph width */
+  line-height: 1.6;
+}
+
+/* Update button container */
+.herohs-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping on mobile */
+}
+
+/* Update button styles */
+.btnhs {
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-shadow: none;
+  font-size: 1.1rem;
+  text-align: center;
+  display: inline-block;
+  min-width: 160px; /* Minimum button width */
+}
+
+.btnhs.primary {
+  background: #1e90ff;
+  color: white;
+  border: 2px solid #1e90ff;
+}
+
+.btnhs.primary:hover {
+  background: #0077ff;
+  border-color: #0077ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
+}
+
+.btnhs.secondary {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+}
+
+.btnhs.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .herohs-content {
+    padding: 40px 20px;
+    text-align: center; /* Center text on mobile */
+    width: 95%; /* Use more width on mobile */
+  }
+  
+  .herohs h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .herohs p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 100%; /* Full width on mobile */
+  }
+  
+  .herohs-buttons {
+    justify-content: center; /* Center buttons on mobile */
+    gap: 15px;
+  }
+  
+  .btnhs {
+    padding: 12px 24px;
+    min-width: 140px;
+    font-size: 1rem;
+    width: 100%; /* Full width buttons on mobile */
+    max-width: 250px; /* But limit max width */
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .herohs h1 {
+    font-size: 2rem;
+  }
+  
+  .herohs p {
+    font-size: 1rem;
+  }
+  
+  .herohs-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .btnhs {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+
+/*----------------------------------
+========= HEALING STREAMS ==========
+----------------------------------*/
+
+/* Prevent horizontal scroll on mobile */
+body, html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.healing-streams-container {
+    width: 100%;
+    background: linear-gradient(135deg, #1a5fb4, #003366);
+    color: white;
+    padding: 40px 0;
+    position: relative;
+    margin-top: auto; /* Push to bottom of header */
+}
+
+.healing-streams-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.healing-event {
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    backdrop-filter: blur(5px);
+    align-content: center;
+}
+
+.healing-event h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.event-date {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #EFBF04;
+    font-weight: 600;
+}
+
+/* Updated to center the buttons */
+.healingstream-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping on mobile */
+  justify-content: center; /* Center horizontally */
+  margin-top: 20px;
+}
+
+/* Update button styles */
+.btnhst {
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-shadow: none;
+  font-size: 1.1rem;
+  text-align: center;
+  display: inline-block;
+  min-width: 160px; /* Minimum button width */
+}
+
+.btnhst.primary {
+  background: #1e90ff;
+  color: white;
+  border: 2px solid #1e90ff;
+}
+
+.btnhst.primary:hover {
+  background: #0077ff;
+  border-color: #0077ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
+}
+
+.btnhst.secondary {
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+}
+
+.btnhst.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}

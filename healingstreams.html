@@ -14,7 +14,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-96x96.png">
 </head>
 <body>
-    <section class="header">
+    <section class="headerhs">
         <nav>
             <a href="index.html">
                 <img src="images/12234logo.webp" alt="CE Hove Logo">
@@ -56,105 +56,26 @@
             </div>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
+     <!-- ========== Footer Section ========== -->
+       <div class="herohs">
+    <video autoplay muted loop playsinline class="herohs-video">
+        <source src="videos/HSBG.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
 
-    <div class="text-box">
-        <h1>Welcome to CE Hove</h1>
-        <p>Giving your life a meaning...</p>
-        <a href="about-us.html" class="hero-button">About Us</a>
-    </div>
-    </section>
-    <!------------ HS --------------->
-    <section>
-    <div class="healing-streams-container">
-        <div class="healing-streams-content">
-            <div class="healing-event">
-                <h3>HEALING STREAMS LIVE HEALING SERVICES WITH PASTOR CHRIS!</h3>
-                <p class="event-date">FRIDAY 13TH MARCH - SUNDAY 15TH MARCH 2026.</p>
-                <div class="healingstream-buttons">
-                    <a href="https://healingstreams.org/online_reg.php?r=ONLINE&lang=en" class="btnhst primary">Register</a>
-                    <a href="healingstreams.html" class="btnhst secondary">More Information</a>
-                </div>
-            </div>
+    <!-- Add this overlay div -->
+    <div class="herohs-overlay"></div>
+
+    <div class="herohs-content">
+        <h1>Streaming Healing,<br />Sharing Faith</h1>
+        <p>Experience the miraculous as you connect to faith-filled programs.</p>
+
+        <div class="herohs-buttons">
+            <a href="https://healingstreams.org/online_reg.php?r=ONLINE&lang=en" class="btnhs primary">Register</a>
+            <a href="https://healingstreams.org/" class="btnhs secondary">Visit Website</a>
         </div>
     </div>
-    </section>
-    <!------------ ministry --------------->
-    <section class="ministry">
-        <h1>About Christ Embassy</h1>
-        <p> Believers' LoveWorld Incorporated, (a.k.a Christ Embassy) is a global ministry with a vision of taking God's divine presence to the nations of the world and to demonstrate the character of the Holy Spirit. This is achieved through every available means, as the Ministry is driven by a passion to see men and women all over the world, come to the knowledge of the divine life made available in Christ Jesus.</p>
-        
-        <div class="row">
-            <div class="values">
-                <h3>Our Vision</h3>
-                <p>To Take God’s divine presence to the people and nations of the world, demonstrating the character of the Spirit.</p>
-            </div>
-            <div class="values">
-                <h3>Our Mission</h3>
-                <p>Our mission is to raise generations of men and women who will come into their inheritance to fulfill God’s dream.</p>
-            </div>
-            <div class="values">
-                <h3>Our Purpose</h3>
-                <p>Our purpose in Christ Embassy Church is to bring this generation of men and women into their inheritance in Christ.</p>
-            </div>
-        </div>
-    </section>
-    <!-- ======== Worship with Us ========= -->
-    <section class="wwu">
-        <h1>Join Us for Worship</h1><br><br>
-        <h3>Sundays at 10:00 AM | Wednesdays at 6:30 PM</h3>
-        <a href="contact.html" class="hero-button">Find Us Here</a>
-    </section>
-
-
-    <!-- ===== News & Updates Section ===== -->
-    <section class="news-updates">
-        <div class="news-container">
-            <h1 class="news-title">Messages</h1>
-        <div class="news-grid">
-            <a href="https://read.rhapsodyofrealities.org/" class="news-card">
-            <img src="images/Rhapsody of Realities.webp" alt="Rhapsody of Realities" />
-            <div class="news-content">
-                <span class="tag">Daily Devotional</span>
-                <h3>Today’s Rhapsody of Realities</h3>
-                <div class="meta" id="todays-date"><br>📅 </div>
-            </div>
-            </a>
-
-            <a href="https://www.youtube.com/watch?v=uOB2z5A63DQ" class="news-card">
-            <img src="images/Year of manifestation.webp" alt="Year of Manifestation" />
-            <div class="news-content">
-                <span class="tag">Message of the Year</span>
-                <h3>2026 – The Year of Manifestation</h3>
-                <div class="meta">📅 1 January 2026</div>
-            </div>
-            </a>
-
-            <a href="https://www.youtube.com/watch?v=uOB2z5A63DQ" class="news-card">
-            <img src="images/Year of manifestation.webp" alt="Month of January" />
-            <div class="news-content">
-                <span class="tag">Message of the Month</span>
-                <h3>January 2026 – The Year of Manifestation</h3>
-                <div class="meta">📅 January 2026</div>
-            </div>
-            </a>
-        </div>
-        </div>
-
-        <script>
-        document.addEventListener('DOMContentLoaded', () => {
-        const dateEl = document.getElementById('todays-date');
-
-        if (dateEl) {
-        const today = new Date();
-        const options = { day: 'numeric', month: 'short', year: 'numeric' };
-        const formatted = today.toLocaleDateString('en-UK', options);
-        dateEl.textContent = `📅 ${formatted}`;
-        }
-        });
-        </script>
-    </section>
-
-
+    </div>
   <!-- ========== Footer Section ========== -->
   <footer class="footer-">
     <div class="footer-container">
@@ -206,7 +127,17 @@
         }
         function hideMenu(){
             navLinks.style.right = "-200px";
-        }        
+        } 
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+            document.body.classList.add('menu-open');
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+            document.body.classList.remove('menu-open');
+        }       
     </script>
+    
 </body>
 </html>
