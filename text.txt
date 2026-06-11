@@ -68,3 +68,29 @@
       }
     });
   </script>
+
+
+
+
+
+
+    <!------------ HS --------------->
+    <section>
+    <div class="healing-streams-container">
+        <div class="healing-streams-content">
+            <div class="healing-event">
+                <h3>HEALING STREAMS LIVE HEALING SERVICES WITH PASTOR CHRIS!</h3>
+                <p class="event-date">FRIDAY 13TH MARCH - SUNDAY 15TH MARCH 2026.</p>
+                <div class="healingstream-buttons">
+                    <a href="https://healingstreams.org/online_reg.php?r=ONLINE&lang=en" class="btnhst primary">Register</a>
+                    <a href="healingstreams.html" class="btnhst secondary">More Information</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+
+
+

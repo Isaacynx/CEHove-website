@@ -4,6 +4,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body, html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 /*----------------------------------
 ============= HEADER ==============
 ----------------------------------*/
@@ -434,7 +438,8 @@ h3{
    MAPS EMBED
 ================================= */
 .maps {
-  width: 512px;
+  width: 100%;
+  max-width: 512px;
   display: block;
   margin: 0 auto;
   border: 0;
@@ -944,10 +949,6 @@ h3{
 ----------------------------------*/
 
 /* Prevent horizontal scroll on mobile */
-body, html {
-  max-width: 100%;
-  overflow-x: hidden;
-}
 
 .healing-streams-container {
     width: 100%;
