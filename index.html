@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christ Embassy Hove</title>
+    <title>Christ Embassy Hove | Church in Hove, Brighton</title>
+    <meta name="description" content="Christ Embassy Hove is a Bible-believing church in Hove, Brighton. Join us Sundays at 10:00 AM and Wednesdays at 6:30 PM. Everyone is welcome.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
-<link rel="icon" href="/favicon.ico">
 
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" href="/images/favicon-96x96.png">
 </head>
 <body>
     <section class="header">
@@ -22,11 +22,11 @@
             </a>
 
             <div class="nav-links" id="navLinks">
-                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <i class="fa-solid fa-xmark" onclick="hideMenu()" role="button" tabindex="0" aria-label="Close menu"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li class="dropdowns">
-                        <button class="dropdown-button">ABOUT</button>
+                        <button class="dropdown-button" aria-haspopup="true" aria-expanded="false">ABOUT</button>
                             <ul class="dropdown-content">
                                 <li><a href="about-us.html">About Us</a></li>
                                 <li><a href="about-pastor-chris.html">About Pastor Chris</a></li>
@@ -35,26 +35,26 @@
                             </ul>
                     </li>
                     <li class="dropdowns">
-                        <button class="dropdown-button">MEDIA</button>
+                        <button class="dropdown-button" aria-haspopup="true" aria-expanded="false">MEDIA</button>
                             <ul class="dropdown-content">
                                 <li><a href="gallery.html">Gallery</a></li>
                                 <li><a href="songlyrics.html">Songs and Lyrics</a></li>
                             </ul>
                     </li>
                     <li class="dropdowns">
-                        <button class="dropdown-button">GETTING INVOLVED</button>
+                        <button class="dropdown-button" aria-haspopup="true" aria-expanded="false">GETTING INVOLVED</button>
                             <ul class="dropdown-content">
-                                <li><a href="songlyrics.html">Cell Ministry</a></li>
+                                <li><a href="cell-ministry.html">Cell Ministry</a></li>
                                 <li><a href="foundation-school.html">Foundation School</a></li>
                                 <li><a href="service-departments.html">Service Departments</a></li>
-                                <li><a href="songlyrics.html">Partnership Arms</a></li>
+                                <li><a href="partnership-arms.html">Partnership Arms</a></li>
                             </ul>
                     </li>
                     <li><a href="watch-live.html">WATCH LIVE</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
-            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+            <i class="fa-solid fa-bars" onclick="showMenu()" role="button" tabindex="0" aria-label="Open menu"></i>
         </nav>
 
     <div class="text-box">
@@ -66,7 +66,7 @@
 
     <!------------ ministry --------------->
     <section class="ministry">
-        <h1>About Christ Embassy</h1>
+        <h2>About Christ Embassy</h2>
         <p> Believers' LoveWorld Incorporated, (a.k.a Christ Embassy) is a global ministry with a vision of taking God's divine presence to the nations of the world and to demonstrate the character of the Holy Spirit. This is achieved through every available means, as the Ministry is driven by a passion to see men and women all over the world, come to the knowledge of the divine life made available in Christ Jesus.</p>
         
         <div class="row">
@@ -86,7 +86,7 @@
     </section>
     <!-- ======== Worship with Us ========= -->
     <section class="wwu">
-        <h1>Join Us For Worship</h1>
+        <h1>Join Us for Worship</h1><br><br>
         <h3>Sundays at 10:00 AM | Wednesdays at 6:30 PM</h3>
         <a href="contact.html" class="hero-button">Find Us Here</a>
     </section>
@@ -95,10 +95,10 @@
     <!-- ===== News & Updates Section ===== -->
     <section class="news-updates">
         <div class="news-container">
-            <h1 class="news-title">Messages</h1>
+            <h2 class="news-title">Messages</h2>
         <div class="news-grid">
             <a href="https://read.rhapsodyofrealities.org/" class="news-card">
-            <img src="images/Rhapsody of Realities.webp" alt="Rhapsody of Realities" />
+            <img src="images/Rhapsody of Realities.webp" alt="Rhapsody of Realities daily devotional" loading="lazy" />
             <div class="news-content">
                 <span class="tag">Daily Devotional</span>
                 <h3>Today’s Rhapsody of Realities</h3>
@@ -107,7 +107,7 @@
             </a>
 
             <a href="https://www.youtube.com/watch?v=uOB2z5A63DQ" class="news-card">
-            <img src="images/Year of manifestation.webp" alt="Year of Manifestation" />
+            <img src="images/Year of manifestation.webp" alt="2026 Year of Manifestation banner" loading="lazy" />
             <div class="news-content">
                 <span class="tag">Message of the Year</span>
                 <h3>2026 – The Year of Manifestation</h3>
@@ -116,10 +116,10 @@
             </a>
 
             <a href="https://ceflix.org/videos/watch/1896500/welcome-to-the-month-of-prayer" class="news-card">
-            <img src="images/Year of manifestation.webp" alt="Month of June" />
+            <img src="images/Year of manifestation.webp" alt="Month of Prayer banner" loading="lazy" />
             <div class="news-content">
                 <span class="tag">Message of the Month</span>
-                <h3>January 2026 – The Month of Prayer</h3>
+                <h3>The Month of Prayer</h3>
                 <div class="meta">📅 June 2026</div>
             </div>
             </a>
@@ -151,7 +151,7 @@
         <p>Christ Embassy Hove Church</p>
         <p>Grove Building, BHASVIC, 205 Dyke Road, Hove, BN3 6EG</p>
         <p>Email: <a href="mailto:cehove2@gmail.com">cehove2@gmail.com</a></p>
-        <p>Phone: +44 7403 914732</p>
+        <p>Phone: <a href="tel:+447403914732" style="color:inherit;">+44 7403 914732</a></p>
         <p>Service Times:<br>Sunday – 10:00 AM<br>Wednesday – 6:30 PM</p>
       </div>
 
@@ -159,11 +159,11 @@
       <div class="footer-section">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="https://pcdl.co/welcome" target="_blank">Pastor Chris Digital Library</a></li>
-          <li><a href="https://rhapsodyofrealities.org" target="_blank">Rhapsody of Realities</a></li>
-          <li><a href="https://pastorchrisonline.org" target="_blank">Pastor Chris Online</a></li>
-          <li><a href="https://loveworlduk.org" target="_blank">Loveworld UK</a></li>
-          <li><a href="https://www.kingsch.at/h" target="_blank">Kingschat</a></li>
+          <li><a href="https://pcdl.co/welcome" target="_blank" rel="noopener noreferrer">Pastor Chris Digital Library</a></li>
+          <li><a href="https://rhapsodyofrealities.org" target="_blank" rel="noopener noreferrer">Rhapsody of Realities</a></li>
+          <li><a href="https://pastorchrisonline.org" target="_blank" rel="noopener noreferrer">Pastor Chris Online</a></li>
+          <li><a href="https://loveworlduk.org" target="_blank" rel="noopener noreferrer">Loveworld UK</a></li>
+          <li><a href="https://www.kingsch.at/h" target="_blank" rel="noopener noreferrer">Kingschat</a></li>
         </ul>
       </div>
 
@@ -171,14 +171,15 @@
       <div class="footer-section">
         <h4>Find Us</h4>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d392.7046884349817!2d-0.15305831990770621!3d50.83404998902961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1785695781351!5m2!1sen!2suk"
+          title="Map showing Christ Embassy Hove location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10079.466331020536!2d-0.159237729409042!3d50.83363513376242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487585fca08293d5%3A0xb0fc803b2ad6ef6b!2sChrist%20Embassy%20Hove%20Church!5e0!3m2!1sen!2suk!4v1785858373714!5m2!1sen!2suk"
           width="250" height="200" style="border:0;" allowfullscreen loading="lazy">
         </iframe>
       </div>
 
     </div>
     <div class="footer-copyright">
-      <p>&copy; 2025 Christ Embassy Hove Church. All rights reserved.</p>
+      <p>&copy; 2026 Christ Embassy Hove Church. All rights reserved.</p>
     </div>
   </footer>
 
@@ -192,7 +193,32 @@
         }
         function hideMenu(){
             navLinks.style.right = "-200px";
-        }        
+        }
+ 
+        // Make dropdowns work on tap/click (mobile & desktop), not just hover
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.dropdowns').forEach((item) => {
+                const button = item.querySelector('.dropdown-button');
+                button.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = item.classList.contains('open');
+                    document.querySelectorAll('.dropdowns.open').forEach((open) => {
+                        if (open !== item) {
+                            open.classList.remove('open');
+                            open.querySelector('.dropdown-button').setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                    item.classList.toggle('open', !isOpen);
+                    button.setAttribute('aria-expanded', String(!isOpen));
+                });
+            });
+            document.addEventListener('click', () => {
+                document.querySelectorAll('.dropdowns.open').forEach((open) => {
+                    open.classList.remove('open');
+                    open.querySelector('.dropdown-button').setAttribute('aria-expanded', 'false');
+                });
+            });
+        });
     </script>
 </body>
 </html>
