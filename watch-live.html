@@ -117,17 +117,18 @@
     }
   </script>
 
-   <!-- ========== Footer Section ========== -->
+ <!-- ========== Footer Section ========== -->
   <footer class="footer-">
     <div class="footer-container">
 
       <!-- Contact Info -->
       <div class="footer-section">
-        <h4>Contact Us</h4>
+        <h4>Address</h4>
+        <ul>
+        <li><a href="contact.html" target="_blank" rel="noopener noreferrer">Christ Embassy Church Near You:</a></li>
         <p>Christ Embassy Hove Church</p>
         <p>Grove Building, BHASVIC, 205 Dyke Road, Hove, BN3 6EG</p>
-        <p>Email: <a href="mailto:cehove2@gmail.com">cehove2@gmail.com</a></p>
-        <p>Phone: +44 7403 914732</p>
+        </ul>
         <p>Service Times:<br>Sunday – 10:00 AM<br>Wednesday – 6:30 PM</p>
       </div>
 
@@ -135,12 +136,22 @@
       <div class="footer-section">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="https://pcdl.co/welcome" target="_blank">Pastor Chris Digital Library</a></li>
-          <li><a href="https://rhapsodyofrealities.org" target="_blank">Rhapsody of Realities</a></li>
-          <li><a href="https://pastorchrisonline.org" target="_blank">Pastor Chris Online</a></li>
-          <li><a href="https://loveworlduk.org" target="_blank">Loveworld UK</a></li>
-          <li><a href="https://www.kingsch.at/h" target="_blank">Kingschat</a></li>
+          <li><a href="https://pcdl.co/welcome" target="_blank" rel="noopener noreferrer">Pastor Chris Digital Library</a></li>
+          <li><a href="https://rhapsodyofrealities.org" target="_blank" rel="noopener noreferrer">Rhapsody of Realities</a></li>
+          <li><a href="https://pastorchrisonline.org" target="_blank" rel="noopener noreferrer">Pastor Chris Online</a></li>
+          <li><a href="https://loveworlduk.org" target="_blank" rel="noopener noreferrer">Loveworld UK</a></li>
+          <li><a href="https://www.kingsch.at/h" target="_blank" rel="noopener noreferrer">Kingschat</a></li>
         </ul>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="footer-section">
+         <h4>Contact Us</h4>
+         <ul>
+            <li><a href="mailto:cehove2@gmail.com" target="_blank" rel="noopener noreferrer">Email: cehove2@gmail.com</a></li>
+            <li><a href="tel:+447403914732" target="_blank" rel="noopener noreferrer">Phone: +44 7403 914732</a></li>
+            <li><a href="https://www.instagram.com/christembassyhove/" target="_blank" rel="noopener noreferrer">Instagram: @christembassyhove</a></li>
+         </ul>
       </div>
 
       <!-- Location Map -->
@@ -155,7 +166,7 @@
 
     </div>
     <div class="footer-copyright">
-      <p>&copy; 2025 Christ Embassy Hove Church. All rights reserved.</p>
+      <p>&copy; 2026 Christ Embassy Hove Church. All rights reserved.</p>
     </div>
   </footer>
 
@@ -169,7 +180,32 @@
         }
         function hideMenu(){
             navLinks.style.right = "-200px";
-        }        
+        }
+ 
+        // Make dropdowns work on tap/click (mobile & desktop), not just hover
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.dropdowns').forEach((item) => {
+                const button = item.querySelector('.dropdown-button');
+                button.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = item.classList.contains('open');
+                    document.querySelectorAll('.dropdowns.open').forEach((open) => {
+                        if (open !== item) {
+                            open.classList.remove('open');
+                            open.querySelector('.dropdown-button').setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                    item.classList.toggle('open', !isOpen);
+                    button.setAttribute('aria-expanded', String(!isOpen));
+                });
+            });
+            document.addEventListener('click', () => {
+                document.querySelectorAll('.dropdowns.open').forEach((open) => {
+                    open.classList.remove('open');
+                    open.querySelector('.dropdown-button').setAttribute('aria-expanded', 'false');
+                });
+            });
+        });
     </script>
 </body>
 </html>
